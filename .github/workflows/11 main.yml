@@ -1,13 +1,14 @@
-name: cron workflow action
+name: Cron Workflow Action
 
 on:
   schedule:
-    - cron: "* * * * *"
+    - cron: "30 17 * * *"  # Runs daily at 23:00 IST
+ 
+
 jobs:
-  cron-scripits:
+  cron-scripts:
     runs-on: ubuntu-latest
-    
-    
+
     steps:
-      - name: print message of cron workflow
-        run: echo "this is a cron workflow"
+      - name: Print message of cron workflow
+        run: echo "This job runs at 11:00 PM IST"
