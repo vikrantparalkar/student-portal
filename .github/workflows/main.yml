@@ -1,8 +1,8 @@
 name: this is my first workflow
 
 on:
-  push:
-    branches: [main]
+push:
+  branches: [main]
 
 jobs:
   demo:
@@ -10,6 +10,6 @@ jobs:
     
     steps:
     - name: Greeting
-      run: echo"hello from vicky"
+      run: echo "hello from vicky"
         
     
