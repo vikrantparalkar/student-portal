@@ -2,7 +2,7 @@ name: cron workflow action
 
 on:
   schedule:
-    - cron: "58 21 * * *"
+    - cron: "0 22 * * *"
 jobs:
   cron-scripits:
     runs-on: ubuntu-latest
