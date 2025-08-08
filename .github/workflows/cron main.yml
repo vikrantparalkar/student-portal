@@ -1,13 +1,13 @@
-name: cron scheduling job workflow
+name: Cron Scheduling Job Workflow
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 0 * * *" 
 
 jobs:
   run-script:
     runs-on: ubuntu-latest
 
     steps:
-      - name: print message
-        run: echo "schedule a workflow executed"
+      - name: Print scheduled message
+        run: echo "Scheduled workflow executed"
