@@ -1,0 +1,36 @@
+name: cache and artifacts in workflow of making angular build
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  cache-and-artifacts-setup:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: accessing the repo
+        uses: actions/checkout@v4.2.2
+
+      - name: install node js
+        uses: actions/setup-node@v3.9.1
+        with:
+           node-version: 22.x
+           cache: 'npm'
+
+      - name: dependensies
+        run: npm install
+
+      - name: build making
+        run: npm run build
+
+      - name: upload on artifacts
+        uses: actions/upload-artifact@v4.6.2
+        with:
+          name: build file
+          path: out/
+        
+          
+        
+        
+      
