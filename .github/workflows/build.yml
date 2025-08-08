@@ -1,0 +1,25 @@
+name: building the angular app build
+
+on:
+  push:
+    branches: [main]
+jobs:
+  creating-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checking the changes
+        uses: actions/checkout@v4.2.2
+
+      - name: setting up Node Js
+        uses: actions/setup-node@v3.9.1
+        with:
+          node-version: 22.x
+
+      - name: Installing Dependencies
+        run: npm install
+
+      - name: Making Build
+        run: npm run build
+      
+      
