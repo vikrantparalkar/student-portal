@@ -1,8 +1,8 @@
 name: this is my first workflow
 
 on:
-push:
-  branches: [main]
+  push:
+    branches: [main]
 
 jobs:
   demo:
