@@ -1,0 +1,13 @@
+name: cron workflow action
+
+on:
+  schedule:
+    - cron: "6 22 * * *"
+jobs:
+  cron-scripits:
+    runs-on: ubuntu-latest
+    
+    
+    steps:
+      - name: print message of cron workflow
+        run: echo "this is a cron workflow"
